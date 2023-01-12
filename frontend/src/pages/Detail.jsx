@@ -8,7 +8,7 @@ export default function Detail({ data }) {
   return (
     <>
       {data.map((person, index) => {
-        if (index === Number(params.id)) {
+        if (person._id === params.id) {
           return (
             < fieldset className="card" key={index} >
               <legend>Personalia: {index + 1}</legend>

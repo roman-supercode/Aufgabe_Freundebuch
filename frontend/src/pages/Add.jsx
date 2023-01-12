@@ -8,6 +8,8 @@ export default function Add() {
         fetch('http://localhost:9999/api/personen/add',
             {
                 method: "POST",
+                // headers: { "Content-Type": "application/json" },
+                // headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' },
                 body: form
             })
             .then(response => {
@@ -17,7 +19,6 @@ export default function Add() {
                     console.log("ETWAS IST KAPUTT");
                 }
             });
-
     }
 
 
@@ -34,7 +35,7 @@ export default function Add() {
                 <label name="alter">Alter: </label>
                 <input name="alter" type="number"></input>
 
-                <label name="telefonnummer">Telefonnummer: </label>
+                <label name="telefonummer">Telefonnummer: </label>
                 <input type="number" name="telefonummer" />
 
                 <label name="email">E-Mail Adresse: </label>
@@ -48,14 +49,14 @@ export default function Add() {
 
                 <label for="selbstständig">Selbstständig: </label>
                 <select name="selbstständig">
-                    <option value="true">Ja</option>
-                    <option value="false">Nein</option>
+                    <option name="selbstständig" value="true">Ja</option>
+                    <option name="selbstständig" value="false">Nein</option>
                 </select>
 
                 <label for="bestandskunde">Bestandskunde: </label>
                 <select name="bestandskunde" id="">
-                    <option value="true" >Ja</option>
-                    <option value="false" >Nein</option>
+                    <option name="bestandskunde" value="true" >Ja</option>
+                    <option name="bestandskunde" value="false" >Nein</option>
                 </select>
 
                 <button type="submit" className="duck">🦆</button>

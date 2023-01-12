@@ -19,7 +19,7 @@ export default function Uebersicht({ data, setData }) {
 
             {data.map((person, index) => {
                 return (
-                    <Link to={`/detail/${index}`} key={index} className="detail-link">
+                    <Link to={`/detail/${person._id}`} key={person._id} className="detail-link">
                         <fieldset className="card">
                             <legend>Personalia: {index + 1}</legend>
                             <p>Vorname: {person.vorname}</p>
