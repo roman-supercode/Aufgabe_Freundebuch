@@ -1,4 +1,4 @@
-- Dokumentmodell
+# Dokumentmodell
 ```js
 // Collection People
 {
