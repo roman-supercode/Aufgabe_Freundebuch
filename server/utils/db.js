@@ -16,7 +16,10 @@ let db;
 // In beiden Fällen wird die Verbindung (entweder die bestehende oder die neu hergestellte) zurückgegeben. Wenn ein Fehler bei der Herstellung der Verbindung auftritt, wird das aufgetretene Error-Objekt über den reject() Aufruf zurückgegeben.
 export const getDb = () => {
     return new Promise((resolve, reject) => {
-        if (db) resolve(db);
+        if (db) {
+            return resolve(db);
+        }
+
         client.connect()
             .then(() => {
                 db = client.db(database);
