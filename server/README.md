@@ -1,16 +1,16 @@
 - Dokumentmodell
 ```js
-// Collection Personen
+// Collection People
 {
-    "vorname": "Max",
-    "nachname": "Mustermann",
-    "geburtstag": 100,
-    "handynummer": "015612345",
-    "email": "max.mustermann@gmy.de",
-    "beruf": "Clown",
-    "verdienst": 999,
-    "selbstständig": true,
-    "bestandkunde": false
+    "vorname": string,
+    "nachname": string,
+    "alter": number,
+    "telefonnummer": string,
+    "email": string,
+    "beruf": string,
+    "verdienst": number,
+    "selbststaendig": boolean,
+    "bestandskunde": boolean
 }
 ```
 
